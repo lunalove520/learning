@@ -67,7 +67,7 @@
     body{padding-bottom:58px;}
 
     /* ── HERO ── */
-    #hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 20px 80px;background:url('hero2.jpg') center top/cover no-repeat;text-align:center;}
+    #hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 20px 80px;background:url('hero2.jpg') center 0px/cover no-repeat;text-align:center;will-change:background-position;}
     #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(250,232,236,0.75) 0%,rgba(242,216,223,0.72) 35%,rgba(237,216,228,0.74) 65%,rgba(245,234,232,0.76) 100%);pointer-events:none;}
     .hero-eyebrow{font-family:var(--jf-quarter);font-size:12.5px;letter-spacing:.18em;color:rgba(199,96,122,.8);margin-bottom:14px;}
     .hero-big{font-family:var(--jf-half);font-size:clamp(54px,17vw,76px);line-height:1.05;margin-bottom:4px;}
@@ -160,6 +160,7 @@
     .cmp-row:last-child{border-bottom:none;}
     .cmp-row.bad{color:var(--text-light);}
     .cmp-row.good{color:var(--rose);font-weight:600;}
+    .cmp-tag-pink{display:inline-block;background:rgba(199,96,122,.15);color:var(--rose);border-radius:5px;padding:2px 7px;font-size:10px;font-weight:600;margin:2px 2px;letter-spacing:.02em;}
     .cmp-cta{padding:12px;border-top:1px solid var(--border);text-align:center;}
     .cmp-cta-btn.filled{display:inline-block;padding:9px 16px;border-radius:50px;font-family:var(--jf-half);font-size:13px;text-decoration:none;background:var(--pink);color:white;box-shadow:0 4px 14px rgba(199,96,122,.3);}
     .compare-detail{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:14px;}
@@ -420,21 +421,21 @@
     </div>
     <div class="what-cards">
       <div class="what-card fade-up">
-        <div class="icon-ph"><img src="icon-1.jpg" alt=""/></div>
+        <div class="icon-ph"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7C4 5.9 4.9 5 6 5H19C20.1 5 21 5.9 21 7V15C21 16.1 20.1 17 19 17H11L7 21V17H6C4.9 17 4 16.1 4 15V7Z" stroke="#C7607A" stroke-width="1.5" stroke-linejoin="round"/><circle cx="9.5" cy="11" r="1.2" fill="#C7607A"/><circle cx="12.5" cy="11" r="1.2" fill="#C7607A"/><circle cx="15.5" cy="11" r="1.2" fill="#C7607A"/></svg></div>
         <div>
           <div class="what-title">非語言的深層交流</div>
           <div class="what-desc">動物不用說話，卻一直在傳遞訊息——透過情緒、身體感覺、圖像、意識。溝通師學會「接收」，而不是靠推測或行為學分析。</div>
         </div>
       </div>
       <div class="what-card fade-up d1">
-        <div class="icon-ph"><img src="icon-2.jpg" alt=""/></div>
+        <div class="icon-ph"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="9" stroke="#C7607A" stroke-width="1.5" stroke-dasharray="3 2"/><circle cx="14" cy="14" r="4" stroke="#C7607A" stroke-width="1.5"/><path d="M14 5C14 5 17.5 9 17.5 14C17.5 19 14 23 14 23" stroke="#C7607A" stroke-width="1.3" stroke-linecap="round"/><path d="M14 5C14 5 10.5 9 10.5 14C10.5 19 14 23 14 23" stroke="#C7607A" stroke-width="1.3" stroke-linecap="round"/><path d="M5 14H23" stroke="#C7607A" stroke-width="1.3" stroke-linecap="round"/></svg></div>
         <div>
           <div class="what-title">炁的能量連結</div>
           <div class="what-desc">透過炁建立意念連線，不受距離限制。只需要一張照片，就能即時連線。不需要動物在場，不需要安靜的房間，隨時隨地都能溝通。</div>
         </div>
       </div>
       <div class="what-card fade-up d2">
-        <div class="icon-ph"><img src="icon-3.jpg" alt=""/></div>
+        <div class="icon-ph"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 14C4 14 8 6 14 6C20 6 24 14 24 14C24 14 20 22 14 22C8 22 4 14 4 14Z" stroke="#C7607A" stroke-width="1.5" stroke-linejoin="round"/><circle cx="14" cy="14" r="3.5" stroke="#C7607A" stroke-width="1.5"/><circle cx="14" cy="14" r="1.5" fill="#C7607A"/><path d="M14 2V4.5M14 23.5V26M2 14H4.5M23.5 14H26" stroke="#C7607A" stroke-width="1.3" stroke-linecap="round"/></svg></div>
         <div>
           <div class="what-title">他心通：直達深層意識</div>
           <div class="what-desc">道教六神通之一。不是直覺猜測，是真正讀取動物內心深層的想法、感受、身體狀況與意識狀態。</div>
@@ -493,7 +494,7 @@
     <div class="sh fade-up">
       <div class="sh-label">這套系統</div>
       <h2 class="sh-title">完整的他心通系統<br/>從授權到畢業後</h2>
-      <p class="sh-sub">寵物溝通師 Luna 師承異人研究院創辦人 李道長 金瀾言卿（全真道龍門派第二十四代誠字輩）<br/>超過五千例溝通案例驗證</p>
+      <p class="sh-sub">寵物溝通師 Luna師承<br/> 異人研究院創辦人 李道長 金瀾言卿<br/>超過五千例溝通案例驗證</p>
     </div>
 
     <div class="sys-overview fade-up d1">
@@ -550,19 +551,19 @@
     <div class="analogy-box fade-up d2">
       <div class="analogy-title">用電腦來理解這套系統</div>
       <div class="analogy-item">
-        <div class="icon-ph-sm"><img src="icon-4.jpg" alt=""/></div>
+        <div class="icon-ph-sm"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="9" height="13" rx="1.5" stroke="#C7607A" stroke-width="1.5"/><path d="M7 16H13C14.1 16 15 15.1 15 14V7H12" stroke="#C7607A" stroke-width="1.3" stroke-linecap="round"/><path d="M8 8L10 11L12 8M10 4V11" stroke="#C7607A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="analogy-text"><strong>過功符 = 安裝專屬通訊 App</strong><br/>安裝之前，再努力也連不上。安裝的那一刻，你才擁有了連線的「資格」。</div>
       </div>
       <div class="analogy-item">
-        <div class="icon-ph-sm"><img src="icon-5.jpg" alt=""/></div>
+        <div class="icon-ph-sm"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.5" y="7" width="13" height="7" rx="1.5" stroke="#C7607A" stroke-width="1.5"/><path d="M14.5 9.5V11.5" stroke="#C7607A" stroke-width="2.2" stroke-linecap="round"/><rect x="3.5" y="9" width="5" height="3" rx="0.5" fill="#C7607A"/><path d="M16.5 6.5C17.6 7.6 17.6 9.4 16.5 10.5M18.2 4.8C20.1 6.7 20.1 9.8 18.2 11.7" stroke="#C7607A" stroke-width="1.2" stroke-linecap="round"/></svg></div>
         <div class="analogy-text"><strong>練炁 = 電池與訊號</strong><br/>電池不足，連線就會斷。練炁是在充電——讓你的能量通道保持暢通，不靠消耗自己來連線。</div>
       </div>
       <div class="analogy-item">
-        <div class="icon-ph-sm"><img src="icon-6.jpg" alt=""/></div>
+        <div class="icon-ph-sm"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2L17 5V10C17 14.5 10 18 10 18C10 18 3 14.5 3 10V5L10 2Z" stroke="#C7607A" stroke-width="1.5" stroke-linejoin="round"/><path d="M11 7H9.2L9.8 10H8L11.2 14L10.5 11H12L11 7Z" stroke="#C7607A" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
         <div class="analogy-text"><strong>五雷護身符 = 防火牆</strong><br/>練功時防止外靈干擾，讓你在安全的環境下修行。</div>
       </div>
       <div class="analogy-item">
-        <div class="icon-ph-sm"><img src="icon-7.jpg" alt=""/></div>
+        <div class="icon-ph-sm"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="16" height="10" rx="2" stroke="#C7607A" stroke-width="1.5"/><path d="M2 14H18" stroke="#C7607A" stroke-width="1.2"/><path d="M8 17H12" stroke="#C7607A" stroke-width="1.5" stroke-linecap="round"/><path d="M6.5 9.5L8.5 11.5L13.5 7" stroke="#C7607A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="analogy-text"><strong>六感訓練 = 學會操作介面</strong><br/>硬體齊全了，還要學會讀取、翻譯、表達——這才是真正的溝通能力。</div>
       </div>
     </div>
@@ -636,7 +637,7 @@
           <div class="cmp-head-title pink">Luna 他心通體系</div>
         </div>
         <div>
-          <div class="cmp-row good" style="font-size:10.5px;">完全無限制：不限定近期照片、任意姿勢、跑動中、背對、睡覺、側臉、模糊皆可</div>
+          <div class="cmp-row good" style="font-size:10px;">完全無限制：<div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:5px;justify-content:center;"><span class="cmp-tag-pink">不限照片時間</span><span class="cmp-tag-pink">不限寵物年齡</span><span class="cmp-tag-pink">任意姿勢</span><span class="cmp-tag-pink">跑跳</span><span class="cmp-tag-pink">背對睡覺</span></div></div>
           <div class="cmp-row good" style="font-size:10.5px;">不限物種：鳥類、爬蟲、異寵（守宮、蛇）皆可，連小強都行</div>
           <div class="cmp-row good">即時連線，完全不需靜心</div>
           <div class="cmp-row good">穩定準確，謙虛說 95% 以上</div>
@@ -659,7 +660,7 @@
       <div class="cd-label"><span>一般直覺式課程</span><span>Luna 他心通體系</span></div>
       <div class="cd-row">
         <div class="cd-cell grey-bg">溝通時說出他人私事、感情家庭問題——有些老師甚至引以為傲。這不只是私事問題，是你正在涉入他人的因果業力，等同背負對方的業。做完溝通身體不好、感情出問題卻不知原因。</div>
-        <div class="cd-cell pink-bg">文化課明確教哪些話能說、哪些不能說。揭露他人私事會背業力——這不是道德問題，是你的氣運在走下坡。</div>
+        <div class="cd-cell pink-bg">文化課明確教哪些話能說、哪些不能說。禍從口出、說錯話不自知，會導致需要背負別人的因果業力。</div>
       </div>
       <div class="cd-row">
         <div class="cd-cell grey-bg">無消業障修行，通絡慢，無法突破瓶頸。</div>
@@ -874,10 +875,23 @@
         </div>
         <div class="story-magic">這不是猜，是接收。當六感全開、心覺精準，你說出來的東西，連對方自己都會愣住。</div>
         <!-- YouTube Placeholder -->
-        <div style="margin-top:12px;background:linear-gradient(135deg,rgba(199,96,122,.05),rgba(199,96,122,.1));border:1px dashed var(--pink-mid);border-radius:12px;padding:16px;text-align:center;">
-          <div style="font-family:var(--jf-quarter);font-size:12px;color:var(--text-light);line-height:1.7;">
-            <span style="display:block;font-family:var(--jf-half);font-size:13px;color:var(--pink);margin-bottom:4px;">▷ 影片即將上線</span>
-            Ray 的畢業溝通完整影片紀錄，敬請期待
+        <div style="margin-top:12px;">
+          <div id="yt-ray" onclick="
+            var f=document.createElement('iframe');
+            f.src='https://www.youtube.com/embed/mxJTrK1ymDQ?autoplay=1';
+            f.allow='autoplay;encrypted-media';f.allowFullscreen=true;
+            f.style.cssText='width:100%;height:100%;border:0;border-radius:12px;';
+            this.innerHTML='';this.appendChild(f);
+          " style="position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;cursor:pointer;background:#000;">
+            <img src="https://img.youtube.com/vi/mxJTrK1ymDQ/hqdefault.jpg" alt="Ray 畢業溝通影片" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px;"/>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <div style="width:52px;height:52px;background:rgba(199,96,122,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(199,96,122,.5);">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 5L16 10L7 15V5Z" fill="white"/></svg>
+              </div>
+            </div>
+            <div style="position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(to top,rgba(0,0,0,0.6),transparent);border-radius:0 0 12px 12px;">
+              <div style="font-family:var(--jf-quarter);font-size:11px;color:rgba(255,255,255,0.9);">▷ Ray 畢業溝通完整影片紀錄</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1286,6 +1300,19 @@ setTimeout(()=>{document.querySelectorAll('.fade-up').forEach(el=>el.classList.a
     });
   }, {threshold:0.25, rootMargin:'0px 0px -30% 0px'});
   secEls.forEach(s => tabObs.observe(s));
+})();
+
+/* ── HERO PARALLAX ── */
+(function(){
+  const hero = document.getElementById('hero');
+  if(!hero) return;
+  function onScroll(){
+    const s = window.scrollY;
+    if(s < window.innerHeight * 1.5){
+      hero.style.backgroundPositionY = (s * 0.38) + 'px';
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
 })();
 
 /* ── FAQ ── */
