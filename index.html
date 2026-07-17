@@ -384,7 +384,7 @@
     </div>
     <div class="hero-btns fade-up d4">
       <a href="https://www.skool.com/lunapet" target="_blank" class="btn btn-pink btn-block">免費進入SKOOL寵物溝通先修班<br/>開始預習</a>
-      <a href="https://www.skool.com/lunapet/calendar" target="_blank" class="btn btn-outline btn-block">預約說明會</a>
+      <a href="https://live.lunapet.co/?src=website" target="_blank" class="btn btn-outline btn-block js-webinar-cta">預約說明會</a>
     </div>
     <div class="hero-proof fade-up" style="transition-delay:.5s">
       <div class="proof-line"></div>
@@ -914,9 +914,13 @@
           那隻離世的小貓，真的透過溝通，把自己的下一世帶到了主人面前。
         </div>
         <div class="story-magic">離世溝通、轉世確認、打聖杯驗證——這套後端資源，學員一樣可以用。</div>
-        <a href="https://www.instagram.com/reel/DRmSSPvEbcc/?igsh=ZGdseXJ1dm5sMW51" target="_blank" class="story-ig">看完整 Reel ↗</a>
+        <a href="https://www.instagram.com/reel/DZhg6IJRgTW/?igsh=dnBzNzltM3hpdHp2" target="_blank" class="story-ig">看完整 Reel ↗</a>
         <div style="margin-top:12px;border-radius:14px;overflow:hidden;aspect-ratio:9/16;max-height:420px;">
-          <iframe src="https://www.instagram.com/reel/DRmSSPvEbcc/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="width:100%;height:100%;border:none;"></iframe>
+          <iframe src="https://www.instagram.com/reel/DZhg6IJRgTW/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="width:100%;height:100%;border:none;"></iframe>
+        </div>
+        <a href="https://www.instagram.com/reel/DZcW-bWxWgL/?igsh=MTM3d2M0Z2Y4eGV3Mw==" target="_blank" class="story-ig" style="margin-top:14px;">看完整 Reel ↗</a>
+        <div style="margin-top:12px;border-radius:14px;overflow:hidden;aspect-ratio:9/16;max-height:420px;">
+          <iframe src="https://www.instagram.com/reel/DZcW-bWxWgL/embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="width:100%;height:100%;border:none;"></iframe>
         </div>
       </div>
 
@@ -1237,7 +1241,7 @@
   <p class="final-sub fade-up d1">不需要馬上決定報名。先進入免費先修班，接觸 Luna 的教學內容，感受有沒有共鳴——這裡不會逼你。</p>
   <div class="final-btns fade-up d2">
     <a href="https://www.skool.com/lunapet" target="_blank" class="btn btn-white btn-block">免費進入SKOOL寵物溝通先修班<br/>開始預習</a>
-    <a href="https://www.skool.com/lunapet/calendar" target="_blank" class="btn btn-ghost btn-block">預約說明會</a>
+    <a href="https://live.lunapet.co/?src=website" target="_blank" class="btn btn-ghost btn-block js-webinar-cta">預約說明會</a>
   </div>
   <div class="final-note fade-up d3">
     ✦ 終身陪跑制 ✦ 道教正式師承 ✦ 台灣無卡分期 3–36 期 ✦<br/>
@@ -1251,12 +1255,21 @@
   <div style="margin-top:6px;">
     <a href="https://www.skool.com/lunapet" target="_blank">免費先修班</a>
     &nbsp;·&nbsp;
-    <a href="https://www.skool.com/lunapet/calendar" target="_blank">預約說明會</a>
+    <a href="https://live.lunapet.co/?src=website" target="_blank" class="js-webinar-cta">預約說明會</a>
   </div>
 </footer>
 
 
 <script>
+/* ── 說明會 CTA 時間開關：7/28 場結束後（台北 7/29 00:00 起）自動導向揭密班 ── */
+(function(){
+  if(Date.now() < new Date('2026-07-29T00:00:00+08:00').getTime()) return;
+  document.querySelectorAll('.js-webinar-cta').forEach(a=>{
+    a.href='https://www.skool.com/lunapet/classroom/406c8d5b?md=1425c9c87ab04c21bdebd03ae3cd49aa';
+    a.textContent = a.classList.contains('btn') ? '開始上揭密班' : '揭密班';
+  });
+})();
+
 /* ── SCROLL ANIMATIONS ── */
 function revealInView(){
   document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>{
