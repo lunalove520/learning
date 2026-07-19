@@ -1261,9 +1261,9 @@
 
 
 <script>
-/* ── 說明會 CTA 時間開關：7/28 場結束後（台北 7/29 00:00 起）自動導向揭密班 ── */
+/* ── 說明會 CTA 時間開關：7/29 場（原7/28改期）結束後（台北 7/30 00:00 起）自動導向揭密班 ── */
 (function(){
-  if(Date.now() < new Date('2026-07-29T00:00:00+08:00').getTime()) return;
+  if(Date.now() < new Date('2026-07-30T00:00:00+08:00').getTime()) return;
   document.querySelectorAll('.js-webinar-cta').forEach(a=>{
     a.href='https://www.skool.com/lunapet/classroom/406c8d5b?md=1425c9c87ab04c21bdebd03ae3cd49aa';
     a.textContent = a.classList.contains('btn') ? '開始上揭密班' : '揭密班';
