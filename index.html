@@ -384,7 +384,7 @@
     </div>
     <div class="hero-btns fade-up d4">
       <a href="https://www.skool.com/lunapet" target="_blank" class="btn btn-pink btn-block">免費進入SKOOL寵物溝通先修班<br/>開始預習</a>
-      <a href="https://live.lunapet.co/?src=website" target="_blank" class="btn btn-outline btn-block js-webinar-cta">預約說明會</a>
+      <a href="https://live.lunapet.co/next?src=website" target="_blank" class="btn btn-outline btn-block js-webinar-cta">了解弟子班</a>
     </div>
     <div class="hero-proof fade-up" style="transition-delay:.5s">
       <div class="proof-line"></div>
@@ -1241,7 +1241,7 @@
   <p class="final-sub fade-up d1">不需要馬上決定報名。先進入免費先修班，接觸 Luna 的教學內容，感受有沒有共鳴——這裡不會逼你。</p>
   <div class="final-btns fade-up d2">
     <a href="https://www.skool.com/lunapet" target="_blank" class="btn btn-white btn-block">免費進入SKOOL寵物溝通先修班<br/>開始預習</a>
-    <a href="https://live.lunapet.co/?src=website" target="_blank" class="btn btn-ghost btn-block js-webinar-cta">預約說明會</a>
+    <a href="https://live.lunapet.co/next?src=website" target="_blank" class="btn btn-ghost btn-block js-webinar-cta">了解弟子班</a>
   </div>
   <div class="final-note fade-up d3">
     ✦ 終身陪跑制 ✦ 道教正式師承 ✦ 台灣無卡分期 3–36 期 ✦<br/>
@@ -1255,20 +1255,21 @@
   <div style="margin-top:6px;">
     <a href="https://www.skool.com/lunapet" target="_blank">免費先修班</a>
     &nbsp;·&nbsp;
-    <a href="https://live.lunapet.co/?src=website" target="_blank" class="js-webinar-cta">預約說明會</a>
+    <a href="https://live.lunapet.co/next?src=website" target="_blank" class="js-webinar-cta">了解弟子班</a>
   </div>
 </footer>
 
 
 <script>
-/* ── 說明會 CTA 時間開關：7/29 場（原7/28改期）結束後（台北 7/30 00:00 起）自動導向揭密班 ── */
-(function(){
-  if(Date.now() < new Date('2026-07-30T00:00:00+08:00').getTime()) return;
-  document.querySelectorAll('.js-webinar-cta').forEach(a=>{
-    a.href='https://www.skool.com/lunapet/classroom/406c8d5b?md=1425c9c87ab04c21bdebd03ae3cd49aa';
-    a.textContent = a.classList.contains('btn') ? '開始上揭密班' : '揭密班';
-  });
-})();
+/* ── 說明會 CTA 時間開關：2026-08-04 移除 ──────────────────────────────
+   原本這裡寫死「7/30 00:00 起自動把 CTA 改導揭密班」。問題是每開一次檔期，
+   就得回來改這一段、重新 push、等 GitHub Pages 生效——而且一定會忘。
+   現在三顆 CTA 一律指 https://live.lunapet.co/next（永久中繼連結），
+   「現在該導去哪」由 next.mjs 的 SCHEDULE 時程表決定：
+     ・平常（沒有檔期）→ 常青入口 /ev（先申請 → 顧問談 → 顧問發付款連結）
+     ・有說明會檔期時 → 在 next.mjs 加一筆 {from,to,url}，到期自動落回常青
+   → 這一頁以後換檔期**零改動**，也不用再 push。改導向的 SOP 在
+     記憶 project_luna_skool_cta_relay，Skool 先修班 10 篇 CTA 走的是同一條中繼。 */
 
 /* ── SCROLL ANIMATIONS ── */
 function revealInView(){
